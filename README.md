@@ -5,8 +5,15 @@
 [Terraform ](https://developer.hashicorp.com/terraform/downloads)is an infrastructure as code tool that lets you build, change, and version cloud and on-prem resources safely and efficiently.
 
 - [Vagrant and Terraform](#vagrant-and-terraform)
+  - [Vagrant vs. Terraform](#vagrant-vs-terraform)
   - [Install Vagrant](#install-vagrant)
   - [Install Terraform](#install-terraform)
+
+## Vagrant vs. Terraform
+
+Vagrant is a tool focused for managing development environments and Terraform is a tool for building infrastructure.
+
+The primary usage of Terraform is for managing remote resources in cloud providers such as AWS. Terraform is designed to be able to manage extremely large infrastructures that span multiple cloud providers. Vagrant is designed primarily for local development environments that use only a handful of virtual machines at most.
 
 ## Install Vagrant
 
