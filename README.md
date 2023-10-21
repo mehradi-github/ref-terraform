@@ -7,6 +7,8 @@
 - [Vagrant and Terraform](#vagrant-and-terraform)
   - [Vagrant vs. Terraform](#vagrant-vs-terraform)
   - [Install Vagrant](#install-vagrant)
+    - [Create project](#create-project)
+    - [vagrant box commands](#vagrant-box-commands)
   - [Install Terraform](#install-terraform)
 
 ## [Vagrant vs. Terraform](https://developer.hashicorp.com/vagrant/intro/vs/terraform)
@@ -21,6 +23,37 @@ The primary usage of Terraform is for managing remote resources in cloud provide
 wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
 sudo apt update && sudo apt install vagrant
+```
+
+### Create project
+
+- Discover [Vagrant Boxes](https://app.vagrantup.com/boxes/search)
+-
+
+```sh
+vagrant --version
+vagrant init
+vagrant up
+vagrant ssh
+whoami
+pwd
+
+```
+
+### vagrant box commands
+
+folder: ~/.vagrant.d/boxes
+
+```sh
+vagrant --help
+vagrant box --help
+vagrant box list
+vagrant box add ubuntu/jammy64
+vagrant box outdate
+vagrant box update ubuntu/jammy64
+vagrant box repackage ubuntu/jammy64 --name my-new-box
+vagrant box prune
+vagrant box remove ubuntu/jammy64
 ```
 
 ## Install Terraform
